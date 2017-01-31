@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="100dp"
     android:layout_margin="16dp"
     card_view:cardCornerRadius="8dp"
     card_view:cardElevation="8dp"
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="16dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:id="@+id/movie_name" />
@@ -41,6 +41,7 @@
                 android:text="Year"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:textSize="16dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:id="@+id/movie_year" />

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:padding="8dp">
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
@@ -33,7 +34,7 @@
                 android:ellipsize="end"/>
             <TextView
                 android:layout_marginTop="4dp"
-                android:id="@+id/mov_crd_runtime"
+                android:id="@+id/mov_crd_tags"
                 android:layout_below="@id/mov_crd_title"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
@@ -47,7 +48,7 @@
             <TextView
                 android:id="@+id/mov_crd_ratings"
                 android:layout_marginTop="10dp"
-                android:layout_below="@id/mov_crd_runtime"
+                android:layout_below="@id/mov_crd_tags"
                 android:layout_marginLeft="16dp"
                 android:layout_toRightOf="@id/mov_crd_image"
                 android:layout_width="wrap_content"
@@ -58,7 +59,7 @@
             <TextView
                 android:id="@+id/mov_crd_ratings_amount"
                 android:layout_marginTop="10dp"
-                android:layout_below="@id/mov_crd_runtime"
+                android:layout_below="@id/mov_crd_tags"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="8dp"
                 android:layout_toRightOf="@id/mov_crd_ratings"
@@ -70,7 +71,7 @@
             <TextView
                 android:id="@+id/mov_crd_year"
                 android:layout_marginTop="10dp"
-                android:layout_below="@id/mov_crd_runtime"
+                android:layout_below="@id/mov_crd_tags"
                 android:layout_marginRight="16dp"
                 android:layout_alignParentRight="true"
                 android:layout_toRightOf="@id/mov_crd_ratings_amount"

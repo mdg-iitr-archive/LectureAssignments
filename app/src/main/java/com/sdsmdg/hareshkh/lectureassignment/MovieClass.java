@@ -1,12 +1,12 @@
 package com.sdsmdg.hareshkh.lectureassignment;
 
-public class movies {
+public class MovieClass {
 
-    String title;
-    String year;
-    String imageResId;
+    private String title;
+    private String year;
+    private String imageResId;
 
-    public movies(String title, String year, String imageResId) {
+    public MovieClass(String title, String year, String imageResId) {
         this.title = title;
         this.year = year;
         this.imageResId = imageResId;

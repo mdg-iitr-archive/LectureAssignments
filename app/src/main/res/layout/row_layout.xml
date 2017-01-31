@@ -35,7 +35,9 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:id="@+id/movie_name" />
+                android:background="#601C1C1C"
+                android:id="@+id/movie_name"
+                android:textColor="#FFFFFF"/>
 
             <TextView
                 android:text="Year"
@@ -44,6 +46,8 @@
                 android:textSize="16dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:background="#601C1C1C"
+                android:textColor="#FFFFFF"
                 android:id="@+id/movie_year" />
 
 

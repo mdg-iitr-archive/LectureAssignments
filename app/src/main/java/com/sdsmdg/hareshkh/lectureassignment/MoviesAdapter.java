@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         return ctx;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView movieName;
         public TextView movieYear;
@@ -37,6 +38,14 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
             movieName= (TextView) itemView.findViewById(R.id.movie_name);
             movieYear= (TextView) itemView.findViewById(R.id.movie_year);
             movieImage= (ImageView) itemView.findViewById(R.id.movie_image);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int position=getAdapterPosition();
+            MovieClass movie= movies.get(position);
+            Toast.makeText(getCtx(), movie.getTitle()+" clicked!" , Toast.LENGTH_SHORT).show();
         }
     }
 

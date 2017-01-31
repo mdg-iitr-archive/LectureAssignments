@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  */
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHolder> {
-    private List<Movie> movies;
+    private List<Movie> movies = new ArrayList<Movie>();
 
     public class MoviesViewHolder extends RecyclerView.ViewHolder{
         public TextView title, tagsString, year, ratings;

@@ -12,7 +12,7 @@ public class Movie {
     public Movie(String movieName, String ratings, String[] tags) {
         this.movieName = movieName;
         this.ratings = ratings;
-        tags = this.tags;
+        this.tags = tags;
     }
 
     public String getMovieName() {
@@ -36,7 +36,7 @@ public class Movie {
     }
 
     public void setTags(String[] tags) {
-        tags = tags;
+        this.tags = tags;
     }
 
     public String generateStringFromTags(){
@@ -45,7 +45,7 @@ public class Movie {
             tagsToReturn += tags[i] + " | ";
         }
 
-        tagsToReturn += tags[tags.length];
+        tagsToReturn += tags[tags.length - 1];
 
         return tagsToReturn;
     }

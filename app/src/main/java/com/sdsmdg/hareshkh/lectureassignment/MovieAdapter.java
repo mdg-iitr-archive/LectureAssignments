@@ -6,9 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.R.attr.onClick;
 
 /**
  * Created by Suyash on 31-01-2017.
@@ -37,6 +40,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHo
     public MoviesViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View itemView  = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.movie_card, parent, false);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView name = (TextView) view.findViewById(R.id.mov_crd_title);
+                String movieName = (String) name.getText();
+                Toast.makeText(view.getContext(), movieName + " selected", Toast.LENGTH_LONG).show();
+            }
+        });
         return new MoviesViewHolder(itemView);
     }
 

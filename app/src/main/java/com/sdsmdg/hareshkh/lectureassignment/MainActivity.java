@@ -37,5 +37,6 @@ public class MainActivity extends AppCompatActivity {
         MoviesAdapter adapter=new MoviesAdapter(myMovies,this);
         movieList.setAdapter(adapter);
         movieList.setLayoutManager(new LinearLayoutManager(this));
+        movieList.setHasFixedSize(true);
     }
 }

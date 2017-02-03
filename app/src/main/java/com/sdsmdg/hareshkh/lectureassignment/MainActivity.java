@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public void populateListAndUpdate(){
         String tagArr[] =  {"2016", "Sample", "No data"};
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 1; i <=10; i++){
             movies.add(new Movie("Sample Movie " + i, "1.3" , tagArr));
         }
 

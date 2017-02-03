@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sdsmdg.tastytoast.TastyToast;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +47,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHo
             public void onClick(View view) {
                 TextView name = (TextView) view.findViewById(R.id.mov_crd_title);
                 String movieName = (String) name.getText();
-                Toast.makeText(view.getContext(), movieName + " selected", Toast.LENGTH_LONG).show();
+                Toast toast = TastyToast.makeText(view.getContext(), movieName + " selected", Toast.LENGTH_LONG, TastyToast.DEFAULT);
+                    toast.cancel();
             }
         });
         return new MoviesViewHolder(itemView);

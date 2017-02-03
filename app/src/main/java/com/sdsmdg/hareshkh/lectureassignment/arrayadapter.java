@@ -1,6 +1,7 @@
 package com.sdsmdg.hareshkh.lectureassignment;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.sdsmdg.tastytoast.TastyToast;
 
 import java.util.ArrayList;
 
@@ -17,6 +21,7 @@ import java.util.ArrayList;
 
 public class arrayadapter extends RecyclerView.Adapter<arrayadapter.MyViewHolder> {
     public Context context;
+
     public ArrayList<movie_items> movies;
     public arrayadapter(ArrayList<movie_items> movies)
     {this.movies=movies;
@@ -30,10 +35,20 @@ public class arrayadapter extends RecyclerView.Adapter<arrayadapter.MyViewHolder
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
+
         holder.movie.setText(movies.get(position).getMoviename());
         holder.year.setText(movies.get(position).getMovieyear());
         holder.img.setImageResource(movies.get(position).getImageid());
+        holder.cd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TastyToast.makeText(context,movies.get(position).getMoviename(),
+                        Toast.LENGTH_SHORT, TastyToast.SUCCESS);
+
+            }
+        });
+
 
     }
 
@@ -48,14 +63,14 @@ public class arrayadapter extends RecyclerView.Adapter<arrayadapter.MyViewHolder
         public TextView movie;
         public TextView year;
         public ImageView img;
-
+        public CardView cd;
         public MyViewHolder(View view) {
         super(view);
         context = view.getContext();
         img = (ImageView) view.findViewById(R.id.im);
         movie = (TextView) view.findViewById(R.id.t1);
         year = (TextView) view.findViewById(R.id.t2);
-
+        cd=(CardView)view.findViewById(R.id.c1);
 
     }
 

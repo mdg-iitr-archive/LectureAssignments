@@ -63,6 +63,18 @@ public class MainActivity extends AppCompatActivity
             movie = new Movie("Guardians of the Galaxy", "2014");
             moviesList.add(movie);
 
+            movie = new Movie("Back t1o the Future", "1985");
+            moviesList.add(movie);
+
+            movie = new Movie("Back t2o the Future", "1985");
+            moviesList.add(movie);
+
+            movie = new Movie("Back t3o the Future", "1985");
+            moviesList.add(movie);
+
+
+
+
             mAdapter.notifyDataSetChanged();
         }
 }

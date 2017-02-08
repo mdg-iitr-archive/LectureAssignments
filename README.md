@@ -13,6 +13,3 @@ This respository will function as a one stop assignment portal for all the MDG l
  - For the first assignment you need to make a branch with your `slack username` as the `branch name`.
  - For all subsequent assignemnts the same branch will be used and you will be adding commits to the branch.
  - Details for all the assignments will be provided in the lectures and a list will also be maintained here.
-
-### Assignemnts
- 1. Make a branch with name set as your `slack username`.

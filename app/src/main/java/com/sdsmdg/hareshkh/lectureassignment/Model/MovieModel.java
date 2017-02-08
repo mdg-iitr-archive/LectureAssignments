@@ -1,4 +1,4 @@
-package com.sdsmdg.hareshkh.lectureassignment.arihant.Model;
+package com.sdsmdg.hareshkh.lectureassignment.Model;
 
 /**
  * Created by Arihant Jain on 1/30/2017.

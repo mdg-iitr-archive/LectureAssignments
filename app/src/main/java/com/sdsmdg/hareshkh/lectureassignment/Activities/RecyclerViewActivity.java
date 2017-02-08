@@ -1,4 +1,4 @@
-package com.sdsmdg.hareshkh.lectureassignment.arihant.Activities;
+package com.sdsmdg.hareshkh.lectureassignment.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.sdsmdg.hareshkh.lectureassignment.R;
-import com.sdsmdg.hareshkh.lectureassignment.arihant.Model.MovieModel;
-import com.sdsmdg.hareshkh.lectureassignment.arihant.adapter.RecyclerViewAdapter;
+import com.sdsmdg.hareshkh.lectureassignment.Model.MovieModel;
+import com.sdsmdg.hareshkh.lectureassignment.adapter.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

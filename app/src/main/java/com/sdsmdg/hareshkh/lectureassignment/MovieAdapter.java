@@ -15,8 +15,6 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import com.bumptech.glide.Glide;
-
 /**
  * Created by Jaskirat on 03-02-2017.
  */
@@ -72,55 +70,55 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         {
             case ((int) R.drawable.grey): drawable = ContextCompat.getDrawable(mContext, R.drawable.grey);
                                           bitmap = ((BitmapDrawable)drawable).getBitmap();
-                                          scaled=Bitmap.createScaledBitmap(bitmap,200,200,false);
+                                          scaled=Bitmap.createScaledBitmap(bitmap,180,180,false);
                                           holder.thumbnail.setImageBitmap(scaled);
                                           break;
 
             case ((int) R.drawable.shawshank): drawable = ContextCompat.getDrawable(mContext, R.drawable.shawshank);
                 bitmap = ((BitmapDrawable)drawable).getBitmap();
-                scaled=Bitmap.createScaledBitmap(bitmap,200,200,false);
+                scaled=Bitmap.createScaledBitmap(bitmap,180,180,false);
                 holder.thumbnail.setImageBitmap(scaled);
                 break;
 
             case ((int) R.drawable.joker): drawable = ContextCompat.getDrawable(mContext, R.drawable.joker);
                 bitmap = ((BitmapDrawable)drawable).getBitmap();
-                scaled=Bitmap.createScaledBitmap(bitmap,200,200,false);
+                scaled=Bitmap.createScaledBitmap(bitmap,180,180,false);
                 holder.thumbnail.setImageBitmap(scaled);
                 break;
 
             case ((int) R.drawable.dictator): drawable = ContextCompat.getDrawable(mContext, R.drawable.dictator);
                 bitmap = ((BitmapDrawable)drawable).getBitmap();
-                scaled=Bitmap.createScaledBitmap(bitmap,200,200,false);
+                scaled=Bitmap.createScaledBitmap(bitmap,180,180,false);
                 holder.thumbnail.setImageBitmap(scaled);
                 break;
 
             case ((int) R.drawable.wolf): drawable = ContextCompat.getDrawable(mContext, R.drawable.wolf);
                 bitmap = ((BitmapDrawable)drawable).getBitmap();
-                scaled=Bitmap.createScaledBitmap(bitmap,200,200,false);
+                scaled=Bitmap.createScaledBitmap(bitmap,180,180,false);
                 holder.thumbnail.setImageBitmap(scaled);
                 break;
 
             case ((int) R.drawable.lala): drawable = ContextCompat.getDrawable(mContext, R.drawable.lala);
                 bitmap = ((BitmapDrawable)drawable).getBitmap();
-                scaled=Bitmap.createScaledBitmap(bitmap,200,200,false);
+                scaled=Bitmap.createScaledBitmap(bitmap,180,180,false);
                 holder.thumbnail.setImageBitmap(scaled);
                 break;
 
             case ((int) R.drawable.titanic): drawable = ContextCompat.getDrawable(mContext, R.drawable.titanic);
                 bitmap = ((BitmapDrawable)drawable).getBitmap();
-                scaled=Bitmap.createScaledBitmap(bitmap,200,300,false);
+                scaled=Bitmap.createScaledBitmap(bitmap,180,180,false);
                 holder.thumbnail.setImageBitmap(scaled);
                 break;
 
             case ((int) R.drawable.godfather): drawable = ContextCompat.getDrawable(mContext, R.drawable.godfather);
                 bitmap = ((BitmapDrawable)drawable).getBitmap();
-                scaled=Bitmap.createScaledBitmap(bitmap,200,200,false);
+                scaled=Bitmap.createScaledBitmap(bitmap,180,180,false);
                 holder.thumbnail.setImageBitmap(scaled);
                 break;
 
             case ((int) R.drawable.happyness): drawable = ContextCompat.getDrawable(mContext, R.drawable.happyness);
                 bitmap = ((BitmapDrawable)drawable).getBitmap();
-                scaled=Bitmap.createScaledBitmap(bitmap,200,200,false);
+                scaled=Bitmap.createScaledBitmap(bitmap,180,180,false);
                 holder.thumbnail.setImageBitmap(scaled);
                 break;
         }
@@ -129,19 +127,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         // loading album cover using Glide library
         //Glide.with(mContext).load(movie.getImg()).into(holder.thumbnail);
 
+
         holder.thumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                line= (String) holder.name.getText();
-                line+=" was clicked";
 
-                view.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        //Toast.makeText(mContext, line, Toast.LENGTH_SHORT).show();
-                        holder.itemView.performClick();
-                    }
-                });
+                holder.itemView.performClick();
             }
         });
 
@@ -151,14 +142,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
                 line= (String) holder.name.getText();
                 line+=" was clicked";
 
-                view.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Toast toast=Toast.makeText(mContext, line, Toast.LENGTH_SHORT);
-                        if(toast!=null)
-                           toast.show();
-                    }
-                });
+                Toast toast=Toast.makeText(mContext, line, Toast.LENGTH_SHORT);
+                if(toast!=null)
+                    toast.show();
             }
         });
     }

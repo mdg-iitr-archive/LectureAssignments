@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#8A6017</color>
+    <color name="details">#8A2016</color>
+    <color name="gray">#DCDCDC</color>
+    <color name="back">#FFD66A</color>
 </resources>

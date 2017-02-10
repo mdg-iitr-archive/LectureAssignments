@@ -4,15 +4,15 @@ package com.sdsmdg.hareshkh.lectureassignment;
  * Created by DELL on 01-02-2017.
  */
 
-public class movie_items {
+public class MovieItems {
     public String moviename;
     public String movieyear;
     public int imageid;
 
-    public movie_items(String moviename,String movieyear,int imageid)
-    {this.moviename=moviename;
-        this.movieyear=movieyear;
-        this.imageid=imageid;
+    public MovieItems(String moviename, String movieyear, int imageid) {
+        this.moviename = moviename;
+        this.movieyear = movieyear;
+        this.imageid = imageid;
 
 
     }

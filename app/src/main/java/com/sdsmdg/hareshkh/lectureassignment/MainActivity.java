@@ -14,17 +14,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<movie_items> mov=new ArrayList<>();
-        mov.add(new movie_items("Resident Evil Final Chapter","Feb 3 2017",R.drawable.m1));
-        mov.add(new movie_items("Assassin's Creed","Dec 30 2016",R.drawable.asscreed));
-        mov.add(new movie_items("Bye Bye Man","Jan 20 2017",R.drawable.byebyeman));
-        mov.add(new movie_items("Moana","Dec 2 2016",R.drawable.moana));
-        mov.add(new movie_items("Passengers","Jan 6 2017",R.drawable.passengers));
-        mov.add(new movie_items("The Great Wall","Feb 3 2017",R.drawable.thegreatwall));
-        mov.add(new movie_items("XXX : The Return of Xander Cage","Jan 14 2017",R.drawable.xxxretofxandercage));
-        mov.add(new movie_items("Arrival","Feb 3 2017",R.drawable.arrival));
-        arrayadapter adapter=new arrayadapter(mov);
-        RecyclerView recylView=(RecyclerView)findViewById(R.id.recyl);
+        ArrayList<MovieItems> mov = new ArrayList<>();
+        mov.add(new MovieItems("Resident Evil Final Chapter", "Feb 3 2017", R.drawable.m1));
+        mov.add(new MovieItems("Assassin's Creed", "Dec 30 2016", R.drawable.asscreed));
+        mov.add(new MovieItems("Bye Bye Man", "Jan 20 2017", R.drawable.byebyeman));
+        mov.add(new MovieItems("Moana", "Dec 2 2016", R.drawable.moana));
+        mov.add(new MovieItems("Passengers", "Jan 6 2017", R.drawable.passengers));
+        mov.add(new MovieItems("The Great Wall", "Feb 3 2017", R.drawable.thegreatwall));
+        mov.add(new MovieItems("XXX : The Return of Xander Cage", "Jan 14 2017", R.drawable.xxxretofxandercage));
+        mov.add(new MovieItems("Arrival", "Feb 3 2017", R.drawable.arrival));
+        ArrayAdapter adapter = new ArrayAdapter(mov);
+        RecyclerView recylView = (RecyclerView) findViewById(R.id.recyl);
         LinearLayoutManager horizontalLayoutManagaer
                 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recylView.setLayoutManager(horizontalLayoutManagaer);

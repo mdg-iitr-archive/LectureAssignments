@@ -1,7 +1,6 @@
 package com.sdsmdg.hareshkh.lectureassignment;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,13 +18,15 @@ import java.util.ArrayList;
  * Created by DELL on 01-02-2017.
  */
 
-public class arrayadapter extends RecyclerView.Adapter<arrayadapter.MyViewHolder> {
+public class ArrayAdapter extends RecyclerView.Adapter<ArrayAdapter.MyViewHolder> {
     public Context context;
 
-    public ArrayList<movie_items> movies;
-    public arrayadapter(ArrayList<movie_items> movies)
-    {this.movies=movies;
+    public ArrayList<MovieItems> movies;
+
+    public ArrayAdapter(ArrayList<MovieItems> movies) {
+        this.movies = movies;
     }
+
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
@@ -43,7 +44,7 @@ public class arrayadapter extends RecyclerView.Adapter<arrayadapter.MyViewHolder
         holder.cd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TastyToast.makeText(context,movies.get(position).getMoviename(),
+                TastyToast.makeText(context, movies.get(position).getMoviename(),
                         Toast.LENGTH_SHORT, TastyToast.SUCCESS);
 
             }
@@ -64,15 +65,16 @@ public class arrayadapter extends RecyclerView.Adapter<arrayadapter.MyViewHolder
         public TextView year;
         public ImageView img;
         public CardView cd;
-        public MyViewHolder(View view) {
-        super(view);
-        context = view.getContext();
-        img = (ImageView) view.findViewById(R.id.im);
-        movie = (TextView) view.findViewById(R.id.t1);
-        year = (TextView) view.findViewById(R.id.t2);
-        cd=(CardView)view.findViewById(R.id.c1);
 
-    }
+        public MyViewHolder(View view) {
+            super(view);
+            context = view.getContext();
+            img = (ImageView) view.findViewById(R.id.im);
+            movie = (TextView) view.findViewById(R.id.t1);
+            year = (TextView) view.findViewById(R.id.t2);
+            cd = (CardView) view.findViewById(R.id.c1);
+
+        }
 
 
     }

@@ -1,19 +1,17 @@
-package com.sdsmdg.hareshkh.lectureassignment;
+package com.sdsmdg.hareshkh.lectureassignment.smahar;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sdsmdg.hareshkh.lectureassignment.R;
 import com.sdsmdg.tastytoast.TastyToast;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.R.attr.onClick;
 
 /**
  * Created by Suyash on 31-01-2017.

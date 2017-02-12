@@ -1,4 +1,4 @@
-package com.sdsmdg.hareshkh.lectureassignment;
+package com.sdsmdg.hareshkh.lectureassignment.smahar;
 
 /**
  * Created by Suyash on 31-01-2017.

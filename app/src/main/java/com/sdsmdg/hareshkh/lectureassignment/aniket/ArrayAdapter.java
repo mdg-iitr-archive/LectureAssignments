@@ -1,4 +1,4 @@
-package com.sdsmdg.hareshkh.lectureassignment;
+package com.sdsmdg.hareshkh.lectureassignment.aniket;
 
 import android.content.Context;
 import android.support.v7.widget.CardView;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sdsmdg.hareshkh.lectureassignment.R;
 import com.sdsmdg.tastytoast.TastyToast;
 
 import java.util.ArrayList;

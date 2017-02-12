@@ -36,6 +36,7 @@ public class ViewTestActivity extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+                
                 Toast.makeText(seekBar.getContext(), "This is a text", Toast.LENGTH_LONG).show();
             }
         });

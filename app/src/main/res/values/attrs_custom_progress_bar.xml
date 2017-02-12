@@ -1,0 +1,10 @@
+<resources>
+    <declare-styleable name="CustomProgressBar">
+        <attr name="exampleString" format="string" />
+        <attr name="exampleDimension" format="dimension" />
+        <attr name="progress" format="integer" />
+        <attr name="maxProgress" format="integer" />
+        <attr name="foreColor" format="color" />
+        <attr name="exampleDrawable" format="color|reference" />
+    </declare-styleable>
+</resources>

@@ -17,5 +17,4 @@
         <activity android:name=".arihant.activities.RecyclerViewActivity" />
         <activity android:name=".arihant.activities.CoordinatorLayoutActivity"></activity>
     </application>
-
 </manifest>

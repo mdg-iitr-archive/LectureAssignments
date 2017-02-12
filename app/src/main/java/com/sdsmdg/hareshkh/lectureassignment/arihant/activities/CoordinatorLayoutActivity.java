@@ -1,24 +1,22 @@
 package com.sdsmdg.hareshkh.lectureassignment.arihant.activities;
 
-import android.graphics.drawable.Drawable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.SeekBar;
 
 import com.sdsmdg.hareshkh.lectureassignment.R;
+import com.sdsmdg.hareshkh.lectureassignment.arihant.customviews.CustomProgressBar;
 
 public class CoordinatorLayoutActivity extends AppCompatActivity {
     private SeekBar seekBar;
-    private ProgressBar progressBar;
+    private CustomProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coordinator_layout);
         seekBar = (SeekBar) findViewById(R.id.seek_bar);
-        progressBar = (ProgressBar) findViewById(R.id.progress);
+        progressBar = (CustomProgressBar) findViewById(R.id.progress);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -32,7 +30,7 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                Snackbar.make(seekBar,"Use seekbar to increase or decrease",Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(seekBar,"created by AeroMaster",Snackbar.LENGTH_SHORT).show();
             }
         });
     }

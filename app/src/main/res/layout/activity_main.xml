@@ -10,8 +10,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.sdsmdg.hareshkh.lectureassignment.MainActivity">
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listOfMovies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonToCustomActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Good luck with your assignments" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src = "@drawable/right_arrow"
+        />
+
 </RelativeLayout>

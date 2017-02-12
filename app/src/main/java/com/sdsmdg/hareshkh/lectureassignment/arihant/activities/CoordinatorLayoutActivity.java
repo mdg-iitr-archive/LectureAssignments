@@ -1,4 +1,4 @@
-package com.sdsmdg.hareshkh.lectureassignment.activities;
+package com.sdsmdg.hareshkh.lectureassignment.arihant.activities;
 
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.Snackbar;

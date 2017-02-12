@@ -1,4 +1,4 @@
-package com.sdsmdg.hareshkh.lectureassignment.Activities;
+package com.sdsmdg.hareshkh.lectureassignment.arihant.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.sdsmdg.hareshkh.lectureassignment.R;
-import com.sdsmdg.hareshkh.lectureassignment.Model.MovieModel;
-import com.sdsmdg.hareshkh.lectureassignment.adapter.RecyclerViewAdapter;
+import com.sdsmdg.hareshkh.lectureassignment.arihant.model.MovieModel;
+import com.sdsmdg.hareshkh.lectureassignment.arihant.adapter.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,22 +43,21 @@ public class RecyclerViewActivity extends AppCompatActivity {
             R.drawable.rogue_one,
             R.drawable.suicide
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
-        recyclerView =(RecyclerView)findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         manager = new LinearLayoutManager(this);
-       // manager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(manager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        //data
         movieModels = new ArrayList<>();
-        for(int i=0;i<movieNames.length;i++){
-            movieModels.add(new MovieModel(movieNames[i],"2016",movieImages[i]));
+        for (int i = 0; i < movieNames.length; i++) {
+            movieModels.add(new MovieModel(movieNames[i], "2016", movieImages[i]));
         }
-        adapter = new RecyclerViewAdapter(movieModels,this);
+        adapter = new RecyclerViewAdapter(movieModels, this);
         recyclerView.setAdapter(adapter);
     }
 }

@@ -1,4 +1,4 @@
-package com.sdsmdg.hareshkh.lectureassignment;
+package com.sdsmdg.hareshkh.lectureassignment.arihant;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;

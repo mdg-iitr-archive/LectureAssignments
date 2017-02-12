@@ -1,4 +1,4 @@
-package com.sdsmdg.hareshkh.lectureassignment.adapter;
+package com.sdsmdg.hareshkh.lectureassignment.arihant.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sdsmdg.hareshkh.lectureassignment.R;
-import com.sdsmdg.hareshkh.lectureassignment.model.MovieModel;
+import com.sdsmdg.hareshkh.lectureassignment.arihant.model.MovieModel;
 
 import java.util.List;
 

@@ -5,5 +5,5 @@
     android:layout_height="match_parent"
     android:background="#466"
     android:id="@+id/recycler_view"
-    tools:context=".activities.RecyclerViewActivity"/>
+    tools:context=".arihant.activities.RecyclerViewActivity"/>
 

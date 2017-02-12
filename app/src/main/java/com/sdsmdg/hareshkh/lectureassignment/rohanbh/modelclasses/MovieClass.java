@@ -1,4 +1,4 @@
-package com.sdsmdg.hareshkh.lectureassignment;
+package com.sdsmdg.hareshkh.lectureassignment.rohanbh.modelclasses;
 
 public class MovieClass {
 

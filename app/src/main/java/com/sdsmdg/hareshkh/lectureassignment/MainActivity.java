@@ -1,9 +1,8 @@
 package com.sdsmdg.hareshkh.lectureassignment;
 
-import android.graphics.Movie;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -34,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view, int position) {
                 MoviesData movie = movieList.get(position);
+                if (position == 0){
+                    Intent intent = new Intent(MainActivity.this,AssignmentSecond.class);
+                    startActivity(intent);
+                }
                 Toast.makeText(getApplicationContext(), movie.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
             }
 
@@ -47,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void prepareMovieData() {
-        MoviesData movie = new MoviesData("Mad Max: Fury Road", R.drawable.s03_ep01, "2015");
+        MoviesData movie = new MoviesData("Assignment 2 ", R.drawable.s03_ep01, "Dependencies");
         movieList.add(movie);
 
         movie = new MoviesData("Inside Out", R.drawable.s03_ep01, "2015");

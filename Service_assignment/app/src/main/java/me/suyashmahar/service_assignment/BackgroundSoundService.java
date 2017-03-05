@@ -1,7 +1,10 @@
 package me.suyashmahar.service_assignment;
 //http://www.hrupin,com/wp-content/uploads/mp3/testsong_20_sec.mp3
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.IBinder;
@@ -23,6 +26,8 @@ public class BackgroundSoundService extends Service implements MediaPlayer.OnPre
     private String musicUrl = "http://www.hrupin.com/wp-content/uploads/mp3/testsong_20_sec.mp3"; // your URL here
     private MediaPlayer player;
     private final IBinder musicBind = new MusicBinder();
+    private static final int NOTIFY_ID=1;
+
 
     public IBinder onBind(Intent arg0) {
         return musicBind;
@@ -85,6 +90,7 @@ public class BackgroundSoundService extends Service implements MediaPlayer.OnPre
     public void onDestroy() {
         player.stop();
         player.release();
+        stopForeground(true);
     }
 
     @Override
@@ -95,6 +101,24 @@ public class BackgroundSoundService extends Service implements MediaPlayer.OnPre
     @Override
     public void onPrepared(MediaPlayer mp) {
         mp.start();
+        Intent notIntent = new Intent(this, MainActivity.class);
+        notIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        PendingIntent pendInt = PendingIntent.getActivity(this, 0,
+                notIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        Notification.Builder builder = new Notification.Builder(this);
+
+        builder.setContentIntent(pendInt)
+                .setSmallIcon(R.drawable.ic_play)
+                .setTicker("Some song...")
+                .setOngoing(true)
+                .setContentTitle("Playing")
+        .setContentText("Some song...");
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
+
+        Notification not = builder.build();
+
+        startForeground(NOTIFY_ID, not);
     }
 
     @Override
@@ -105,5 +129,29 @@ public class BackgroundSoundService extends Service implements MediaPlayer.OnPre
     @Override
     public void onCompletion(MediaPlayer mp) {
 
+    }
+
+    public int getPosn(){
+        return player.getCurrentPosition();
+    }
+
+    public int getDur(){
+        return player.getDuration();
+    }
+
+    public boolean isPng(){
+        return player.isPlaying();
+    }
+
+    public void pausePlayer(){
+        player.pause();
+    }
+
+    public void seek(int posn){
+        player.seekTo(posn);
+    }
+
+    public void go(){
+        player.start();
     }
 }

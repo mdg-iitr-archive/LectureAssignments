@@ -22,7 +22,9 @@ import android.app.Notification;
 import android.app.PendingIntent;
 
 public class MainActivity extends AppCompatActivity implements MediaPlayerControl {
-    private BackgroundSoundService musicService;
+    public static MainActivity instance;
+
+    public BackgroundSoundService musicService;
     private Intent playIntent;
     private boolean musicBound = false;
 
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements MediaPlayerContro
     private MusicController controller;
 
     private int lastPos = 0;
+
+    public static MainActivity getInstance(){
+        return instance;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -189,6 +195,9 @@ public class MainActivity extends AppCompatActivity implements MediaPlayerContro
     @Override
     protected void onStart() {
         super.onStart();
+
+        instance = this;
+
         Toast.makeText(this, "This ", Toast.LENGTH_LONG).show();
         if (playIntent == null){
             playIntent = new Intent(this, BackgroundSoundService.class);

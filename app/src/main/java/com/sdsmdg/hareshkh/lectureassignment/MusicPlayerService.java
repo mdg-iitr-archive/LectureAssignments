@@ -1,5 +1,7 @@
 package com.sdsmdg.hareshkh.lectureassignment;
 
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.media.AudioManager;
@@ -112,6 +114,21 @@ MediaPlayer.OnCompletionListener{
     }
     public void pauseSong(){
         mPlayer.pause();
+    }
+
+    public void showNotifications(){
+        Intent notificationIntent = new Intent(this, MusicPlayerInterface.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+
+        Notification notification = new Notification.Builder(this)
+                .setContentTitle("Samagra's Music Player")
+                .setContentText("Playing Shape Of You")
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentIntent(pendingIntent)
+                .setTicker("abcd")
+                .build();
+
+        startForeground(21, notification);
     }
 
 }

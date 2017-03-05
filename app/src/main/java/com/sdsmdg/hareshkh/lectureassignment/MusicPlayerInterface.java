@@ -67,8 +67,15 @@ public class MusicPlayerInterface extends AppCompatActivity {
         super.onStart();
         if(playIntent==null){
             playIntent = new Intent(MusicPlayerInterface.this, MusicPlayerService.class);
+
             bindService(playIntent, musicConnection, Context.BIND_AUTO_CREATE);
             startService(playIntent);
         }
+    }
+
+    @Override
+    protected void onPause() {
+        musicSrv.showNotifications();
+        super.onPause();
     }
 }

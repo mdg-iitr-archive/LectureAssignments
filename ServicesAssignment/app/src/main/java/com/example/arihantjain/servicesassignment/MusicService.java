@@ -6,6 +6,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.os.Binder;
 import android.os.IBinder;
 
 /**
@@ -13,30 +14,24 @@ import android.os.IBinder;
  */
 
 public class MusicService extends Service {
+    private IBinder mBinder = new MusicBinder();
     private MediaPlayer player;
     private String url = "http://dot.890m.com/shapeofyou.mp3";
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
+
     @Override
     public IBinder onBind(Intent intent) {
-        return null;
+        return mBinder;
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        int code = intent.getIntExtra("code",2);
-        if(code == 0){
-            playMusic();
-        }
-        else if(code == 1){
-            player.stop();
-            stopSelf();
-        }
-        else{
-            player.stop();
-            playMusic();
-        }
         return START_NOT_STICKY;
     }
-
 
     @Override
     public void onDestroy() {
@@ -64,9 +59,23 @@ public class MusicService extends Service {
                 .setContentTitle("Music")
                 .setContentText("Music service is on.")
                 .setContentIntent(pendingIntent)
-                .setAutoCancel(true)
-                .setOngoing(true)
                 .build();
         startForeground(12,notification);
+    }
+    public boolean isPlaying(){
+        if(player!=null){
+            if(player.isPlaying())
+                return true;
+        }
+        return false;
+    }
+    public void stopPlayer(){
+        player.stop();
+        stopForeground(true);
+    }
+    public class MusicBinder extends Binder {
+        MusicService getService() {
+            return MusicService.this;
+        }
     }
 }

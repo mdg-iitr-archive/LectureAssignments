@@ -4,9 +4,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.content.SharedPreferences;
 import android.os.IBinder;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
                 replayButton.setClickable(false);
             }
         }
-
         @Override
         public void onServiceDisconnected(ComponentName name) {
             isBounded = false;
+            Toast.makeText(musicService, "PLAY MUSIC", Toast.LENGTH_SHORT).show();
         }
     };
     @Override
@@ -58,14 +56,13 @@ public class MainActivity extends AppCompatActivity {
             isPlaying = false;
             replayButton.setClickable(false);
             if (isBounded) {
-                musicService.stopPlayer();
+                musicService.pausePlayer();
             }
         }
     }
     public void replayMusic(View view){
         if(isBounded){
-            musicService.stopPlayer();
-            musicService.playMusic();
+            musicService.restartPlayer();
         }
         isPlaying = true;
         playBtn.setText("Pause");

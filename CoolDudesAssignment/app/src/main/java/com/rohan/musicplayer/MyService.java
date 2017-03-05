@@ -17,6 +17,7 @@ import java.io.IOException;
 public class MyService extends Service {
 
     private MediaPlayer mPlayer = new MediaPlayer();
+    private boolean playerIsSet = false;
     private String url = "http://dot.890m.com/shapeofyou.mp3";
 
     public class MyBinder extends Binder {
@@ -30,8 +31,31 @@ public class MyService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        setUpPlayer();
+        if (!playerIsSet) {
+            setUpPlayer();
+            playerIsSet = true;
+        }
         return mBinder;
+    }
+
+    @Override
+    public boolean onUnbind(Intent intent) {
+        mPlayer.stop();
+        mPlayer.release();
+        playerIsSet = false;
+        stopSelf();
+        return super.onUnbind(intent);
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        if (!playerIsSet) {
+            setUpPlayer();
+            playerIsSet = true;
+        }
+        if(!mPlayer.isPlaying())
+            mPlayer.start();
+        return super.onStartCommand(intent, flags, startId);
     }
 
     public void setUpPlayer() {
@@ -75,7 +99,7 @@ public class MyService extends Service {
         }
     }
 
-    public void showNotification(){
+    public void showNotification() {
         Intent notificationIntent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 
@@ -89,7 +113,7 @@ public class MyService extends Service {
         startForeground(101, notification);
     }
 
-    public void removeNotification(){
+    public void removeNotification() {
         stopForeground(true);
     }
 }

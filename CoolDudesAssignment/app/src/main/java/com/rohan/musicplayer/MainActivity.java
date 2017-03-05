@@ -27,32 +27,27 @@ public class MainActivity extends AppCompatActivity {
         pauseButton = (Button) findViewById(R.id.pause);
         stopButton = (Button) findViewById(R.id.stop);
 
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
         Intent intent = new Intent(this, MyService.class);
         bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mBound)
+                if (mBound)
                     mService.startPlayer();
             }
         });
         pauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mBound)
+                if (mBound)
                     mService.pausePlayer();
             }
         });
         stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mBound)
+                if (mBound)
                     mService.stopPlayer();
             }
         });
@@ -62,14 +57,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if(mBound)
+        if (mBound)
             mService.showNotification();
     }
 
     @Override
     protected void onPostResume() {
         super.onPostResume();
-        if(mBound)
+        if (mBound)
             mService.removeNotification();
     }
 
@@ -85,8 +80,7 @@ public class MainActivity extends AppCompatActivity {
     private ServiceConnection mConnection = new ServiceConnection() {
 
         @Override
-        public void onServiceConnected(ComponentName className,
-                                       IBinder service) {
+        public void onServiceConnected(ComponentName className, IBinder service) {
             MyService.MyBinder binder = (MyService.MyBinder) service;
             mService = binder.getService();
             mBound = true;

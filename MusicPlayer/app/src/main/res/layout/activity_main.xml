@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.shyam.musicplayer.MainActivity">
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Music"
+        android:onClick="startMusic"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp" />
+
+    <Button
+        android:id="@+id/stopMusic"
+        android:text="Stop Music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_below="@+id/pauseButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="stopMusic"/>
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:text="Pause Music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pauseMusic"
+        android:layout_below="@+id/startButton"
+        android:layout_alignRight="@+id/startButton"
+        android:layout_alignEnd="@+id/startButton"
+        android:layout_marginTop="90dp" />
+
+</RelativeLayout>

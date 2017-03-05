@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sdsmdg.hareshkh.lectureassignment">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AssignmentSecond"></activity>
+        <activity android:name=".AssignmentSecond" />
+
+        <service android:name=".MusicPlayerService" />
+
+        <activity android:name=".MusicPlayerInterface"></activity>
     </application>
 
 </manifest>

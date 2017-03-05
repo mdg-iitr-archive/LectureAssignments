@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this,AssignmentSecond.class);
                     startActivity(intent);
                 }
+                if (position == 1){
+                    Intent intent = new Intent(MainActivity.this,MusicPlayerInterface.class);
+                    startActivity(intent);
+                }
                 Toast.makeText(getApplicationContext(), movie.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
             }
 
@@ -53,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         MoviesData movie = new MoviesData("Assignment 2 ", R.drawable.s03_ep01, "Dependencies");
         movieList.add(movie);
 
-        movie = new MoviesData("Inside Out", R.drawable.s03_ep01, "2015");
+        movie = new MoviesData("Assignment 3", R.drawable.s03_ep01, "Music Player App");
         movieList.add(movie);
 
         movie = new MoviesData("Star Wars: Episode VII - The Force Awakens", R.drawable.s03_ep01, "2015");

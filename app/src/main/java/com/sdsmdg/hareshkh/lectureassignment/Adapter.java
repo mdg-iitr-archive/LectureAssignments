@@ -16,7 +16,8 @@ import java.util.List;
  * Created by shyam on 31-Jan-17.
  */
 
-public class Adapter extends RecyclerView.Adapter<ItemViewHolder> {
+public class
+Adapter extends RecyclerView.Adapter<ItemViewHolder> {
     int moviesCount;
     Context context;
     ItemViewHolder itemViewHolder;

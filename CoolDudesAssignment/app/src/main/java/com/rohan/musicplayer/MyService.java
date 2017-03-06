@@ -6,6 +6,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
@@ -18,22 +19,30 @@ public class MyService extends Service {
 
     private MediaPlayer mPlayer = new MediaPlayer();
     private boolean playerIsSet = false;
-    private String url = "http://dot.890m.com/shapeofyou.mp3";
+
+    public interface BoundServiceListener {
+
+        public void finishedDownloading();
+    }
 
     public class MyBinder extends Binder {
         MyService getService() {
             return MyService.this;
         }
+
+        public void setListener(BoundServiceListener listener) {
+            mListener = listener;
+        }
     }
 
     private final IBinder mBinder = new MyBinder();
+    private BoundServiceListener mListener;
 
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         if (!playerIsSet) {
-            setUpPlayer();
-            playerIsSet = true;
+            new LoadDataInBackground().execute();
         }
         return mBinder;
     }
@@ -53,15 +62,33 @@ public class MyService extends Service {
             setUpPlayer();
             playerIsSet = true;
         }
-        if(!mPlayer.isPlaying())
+        if (!mPlayer.isPlaying())
             mPlayer.start();
         return super.onStartCommand(intent, flags, startId);
+    }
+
+    private class LoadDataInBackground extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            setUpPlayer();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            playerIsSet = true;
+            if (mListener != null)
+                mListener.finishedDownloading();
+        }
     }
 
     public void setUpPlayer() {
         mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         try {
-            mPlayer.setDataSource(url);
+            String URL = "http://dot.890m.com/shapeofyou.mp3";
+            mPlayer.setDataSource(URL);
         } catch (IllegalArgumentException e) {
             Toast.makeText(getApplicationContext(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
         } catch (SecurityException e) {

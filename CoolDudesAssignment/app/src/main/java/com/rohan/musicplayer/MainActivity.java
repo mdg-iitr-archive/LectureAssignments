@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import dmax.dialog.SpotsDialog;
+
 public class MainActivity extends AppCompatActivity {
 
     MyService mService;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Button playButton;
     Button pauseButton;
     Button stopButton;
+    public SpotsDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         playButton = (Button) findViewById(R.id.play);
         pauseButton = (Button) findViewById(R.id.pause);
         stopButton = (Button) findViewById(R.id.stop);
+
+        dialog = new SpotsDialog(this);
+        dialog.show();
 
         Intent intent = new Intent(this, MyService.class);
         bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
@@ -83,6 +89,13 @@ public class MainActivity extends AppCompatActivity {
         public void onServiceConnected(ComponentName className, IBinder service) {
             MyService.MyBinder binder = (MyService.MyBinder) service;
             mService = binder.getService();
+            binder.setListener(new MyService.BoundServiceListener() {
+
+                @Override
+                public void finishedDownloading() {
+                    dialog.dismiss();
+                }
+            });
             mBound = true;
         }
 
@@ -91,4 +104,5 @@ public class MainActivity extends AppCompatActivity {
             mBound = false;
         }
     };
+
 }

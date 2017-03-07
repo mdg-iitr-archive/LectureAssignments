@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sdsmdg.hareshkh.lectureassignment.R;
 import com.sdsmdg.hareshkh.lectureassignment.model.Movie;
@@ -52,6 +53,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
 //        Bitmap bm = new Bitmap();
 //        holder.poster.setImageBitmap();
         holder.poster.setImageResource(movie.getPoster());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
     }
 
     @Override

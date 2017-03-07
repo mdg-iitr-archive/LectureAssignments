@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ArrayAdapter;
+import android.view.View;
 
 import com.sdsmdg.hareshkh.lectureassignment.adapter.MovieAdapter;
 import com.sdsmdg.hareshkh.lectureassignment.model.Movie;
@@ -32,7 +32,17 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(movieAdapter);
 
         fillAdapter();
+
+//        recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new RecyclerTouchListener.ClickListener(){
+//            @Override
+//            public void onClick(View view, int position){
+//                Movie movie = movieList.get(position);
+//                Toast.makeText(getApplicationContext(), movie.getName(), Toast.LENGTH_SHORT).show();
+//            }
+//        }));
     }
+
+
 
     private void fillAdapter(){
 
@@ -72,4 +82,7 @@ public class MainActivity extends AppCompatActivity {
         movieAdapter.notifyDataSetChanged();
     }
 
+    public interface ClickListener {
+        void onClick(View view, int position);
+    }
 }

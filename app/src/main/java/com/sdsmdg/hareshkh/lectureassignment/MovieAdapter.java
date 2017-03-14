@@ -2,6 +2,7 @@ package com.sdsmdg.hareshkh.lectureassignment;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
@@ -57,7 +58,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position)
     {
-        Movie movie = movieList.get(position);
+        final Movie movie = movieList.get(position);
         holder.name.setText(movie.getName());
         holder.year.setText(movie.getYear());
         holder.genre.setText(movie.getGenre());
@@ -145,6 +146,21 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
                 Toast toast=Toast.makeText(mContext, line, Toast.LENGTH_SHORT);
                 if(toast!=null)
                     toast.show();
+            }
+        });
+
+
+        //holder.itemView.setBackgroundColor(context.getResources().getColor(movie.getSelected() ? R.color.delete_gray: R.color.White));
+
+        holder.itemView.setBackgroundColor(movie.getSelected() ? Color.CYAN : Color.WHITE);
+
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+
+                movie.setSelected(!movie.getSelected());
+                holder.itemView.setBackgroundColor(movie.getSelected() ? Color.CYAN : Color.WHITE);
+                return false;
             }
         });
     }

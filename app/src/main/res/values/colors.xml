@@ -8,4 +8,6 @@
     <color name="details">#8A2016</color>
     <color name="gray">#DCDCDC</color>
     <color name="back">#FFD66A</color>
+    <color name="delete_gray">#D0D0D0 </color>
+    <color name="White">#ffffff</color>
 </resources>

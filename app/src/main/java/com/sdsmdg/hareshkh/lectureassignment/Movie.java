@@ -11,8 +11,25 @@ public class Movie
     private String genre;
     private int img;
 
+    //
+
+    private boolean isSelected;
+
+    public boolean getSelected()
+    {
+        return isSelected;
+    }
+
+    public void setSelected(boolean x)
+    {
+        isSelected=x;
+    }
+
+    //
+
     public Movie()
     {
+        isSelected=false;
     }
 
     public Movie(String name, String year, String genre, int img)

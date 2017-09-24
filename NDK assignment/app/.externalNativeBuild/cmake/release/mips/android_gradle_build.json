@@ -1,0 +1,41 @@
+
+{
+	"buildFiles" : 
+	[
+		"/home/arihant/Projects/LectureAssignments/NDK assignment/app/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/home/arihant/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/arihant/Projects/LectureAssignments/NDK\\ assignment/app/.externalNativeBuild/cmake/release/mips --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"MidPoint-Release-mips" : 
+		{
+			"abi" : "mips",
+			"artifactName" : "MidPoint",
+			"buildCommand" : "/home/arihant/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/arihant/Projects/LectureAssignments/NDK\\ assignment/app/.externalNativeBuild/cmake/release/mips --target MidPoint",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=mipsel-none-linux-android --gcc-toolchain=/home/arihant/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/home/arihant/Android/Sdk/ndk-bundle/sysroot  -DMidPoint_EXPORTS -I../../../../src/main/cpp -isystem /home/arihant/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/arihant/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/include -isystem /home/arihant/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/arihant/Android/Sdk/ndk-bundle/sysroot/usr/include/mipsel-linux-android -D__ANDROID_API__=19 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mips32 -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/arihant/Projects/LectureAssignments/NDK assignment/app/src/main/cpp/MidPoint.cpp",
+					"workingDirectory" : "/home/arihant/Projects/LectureAssignments/NDK assignment/app/.externalNativeBuild/cmake/release/mips"
+				}
+			],
+			"output" : "/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/cmake/release/obj/mips/libMidPoint.so",
+			"toolchain" : "15390554111596042004"
+		}
+	},
+	"toolchains" : 
+	{
+		"15390554111596042004" : 
+		{
+			"cCompilerExecutable" : "/home/arihant/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/arihant/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+		}
+	}
+}

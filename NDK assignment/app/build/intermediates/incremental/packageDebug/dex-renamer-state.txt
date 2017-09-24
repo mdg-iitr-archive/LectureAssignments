@@ -1,0 +1,7 @@
+#Sun Sep 24 21:42:25 GMT 2017
+base.0=/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1384b078209a166ce08dfe8af5466382f91079d6
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c232a2382a172da263d7018072883939b510e1a0/classes.dex
+base.1=/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c232a2382a172da263d7018072883939b510e1a0
+file.0=/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1384b078209a166ce08dfe8af5466382f91079d6/classes.dex

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/arihant/NDKAssigment1/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/arihant/NDKAssigment1/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

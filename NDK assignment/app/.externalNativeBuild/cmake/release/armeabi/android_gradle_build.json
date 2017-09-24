@@ -1,0 +1,41 @@
+
+{
+	"buildFiles" : 
+	[
+		"/home/arihant/Projects/LectureAssignments/NDK assignment/app/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/home/arihant/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/arihant/Projects/LectureAssignments/NDK\\ assignment/app/.externalNativeBuild/cmake/release/armeabi --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"MidPoint-Release-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "MidPoint",
+			"buildCommand" : "/home/arihant/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/arihant/Projects/LectureAssignments/NDK\\ assignment/app/.externalNativeBuild/cmake/release/armeabi --target MidPoint",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/home/arihant/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/arihant/Android/Sdk/ndk-bundle/sysroot  -DMidPoint_EXPORTS -I../../../../src/main/cpp -isystem /home/arihant/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/arihant/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -isystem /home/arihant/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /home/arihant/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=19 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -Os -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/arihant/Projects/LectureAssignments/NDK assignment/app/src/main/cpp/MidPoint.cpp",
+					"workingDirectory" : "/home/arihant/Projects/LectureAssignments/NDK assignment/app/.externalNativeBuild/cmake/release/armeabi"
+				}
+			],
+			"output" : "/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/cmake/release/obj/armeabi/libMidPoint.so",
+			"toolchain" : "15390554111596042004"
+		}
+	},
+	"toolchains" : 
+	{
+		"15390554111596042004" : 
+		{
+			"cCompilerExecutable" : "/home/arihant/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/arihant/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+		}
+	}
+}

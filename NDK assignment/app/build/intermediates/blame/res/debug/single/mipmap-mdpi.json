@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/arihant/NDKAssigment1/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png",
+        "source": "/home/arihant/NDKAssigment1/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/arihant/NDKAssigment1/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/home/arihant/NDKAssigment1/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/home/arihant/Projects/LectureAssignments/NDK assignment/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png",
+        "source": "/home/arihant/Projects/LectureAssignments/NDK assignment/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    }
+]

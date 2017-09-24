@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/arihant/NDKAssigment1/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/arihant/NDKAssigment1/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/arihant/NDKAssigment1/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/arihant/NDKAssigment1/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/arihant/.android/build-cache/0e684bd189217044243314b6c551c7acb9aa3a58/output/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1384b078209a166ce08dfe8af5466382f91079d6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="94814881a56b55baf2b92dfe31c1189bcae1fb78">
+        <dex dex="/home/arihant/Projects/LectureAssignments/NDK assignment/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c232a2382a172da263d7018072883939b510e1a0/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="16dp"
+    tools:context="com.example.whocares.rxjavaassignment.MainActivity">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/search"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_search_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/username"
+        app:layout_constraintTop_toTopOf="@id/username" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/user_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username">
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Name: "
+            app:layout_constraintTop_toBottomOf="@id/profile_pic" />
+
+        <TextView
+            android:id="@+id/name_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="KD"
+            app:layout_constraintStart_toEndOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/profile_pic" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location: "
+            app:layout_constraintTop_toBottomOf="@id/name_value" />
+
+        <TextView
+            android:id="@+id/location_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="location"
+            app:layout_constraintStart_toEndOf="@id/location"
+            app:layout_constraintTop_toBottomOf="@id/name_value" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: "
+            app:layout_constraintTop_toBottomOf="@id/location_value" />
+
+        <TextView
+            android:id="@+id/email_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wtf"
+            app:layout_constraintStart_toEndOf="@id/email"
+            app:layout_constraintTop_toBottomOf="@id/location_value" />
+
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bio: "
+            app:layout_constraintTop_toBottomOf="@id/email_value" />
+
+        <TextView
+            android:id="@+id/bio_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I am pro"
+            app:layout_constraintStart_toEndOf="@id/bio"
+            app:layout_constraintTop_toBottomOf="@id/email_value" />
+
+        <TextView
+            android:id="@+id/public_repos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of public repos: "
+            app:layout_constraintTop_toBottomOf="@id/bio_value" />
+
+        <TextView
+            android:id="@+id/public_repos_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@id/public_repos"
+            app:layout_constraintTop_toBottomOf="@id/bio_value" />
+
+        <TextView
+            android:id="@+id/public_gists"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of public gists: "
+            app:layout_constraintTop_toBottomOf="@id/public_repos_value" />
+
+        <TextView
+            android:id="@+id/public_gists_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@id/public_gists"
+            app:layout_constraintTop_toBottomOf="@id/public_repos_value" />
+
+        <TextView
+            android:id="@+id/followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of followers: "
+            app:layout_constraintTop_toBottomOf="@id/public_gists_value" />
+
+        <TextView
+            android:id="@+id/followers_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="infi"
+            app:layout_constraintStart_toEndOf="@id/followers"
+            app:layout_constraintTop_toBottomOf="@id/public_gists_value" />
+
+        <TextView
+            android:id="@+id/following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Following: "
+            app:layout_constraintTop_toBottomOf="@id/followers_value" />
+
+        <TextView
+            android:id="@+id/following_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="no one"
+            app:layout_constraintStart_toEndOf="@id/following"
+            app:layout_constraintTop_toBottomOf="@id/followers_value" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
